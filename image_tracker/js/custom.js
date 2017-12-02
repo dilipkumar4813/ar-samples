@@ -22,7 +22,7 @@ var World = {
 			drawables: {
 				cam: imageDrawable1
 			},
-			onImageRecognized: this.playSound(),
+			// onImageRecognized: this.playSound(),
 			onError: function(errorMessage){
 				alert(errorMessage);
 			}
