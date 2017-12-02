@@ -35,6 +35,13 @@ var World = {
 
 		});
 
+		var sound = new AR.Sound("assets/jellylude.mp3", {
+  			onLoaded : function(){},
+  			onError : function(){
+    			// alert the user that the sound file could not be loaded
+    		},
+  		});
+
 		/*
 			The last line combines everything by creating an AR.ImageTrackable with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
 			Please note that in this case the target name is a wildcard. Wildcards can be used to respond to any target defined in the target collection. If you want to respond to a certain target only for a particular AR.ImageTrackable simply provide the target name as specified in the target collection.
@@ -43,7 +50,7 @@ var World = {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: var sound = new AR.Sound("assets/jellylude.mp3", {}),
+			onImageRecognized: sound.play(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
