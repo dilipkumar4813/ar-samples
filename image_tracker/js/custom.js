@@ -31,11 +31,23 @@ var World = {
 		});
 
 		var pageOne = AR.ImageTrackable(this.trackerOne,'*',{
-			onImageRecognized: this.playSound();
+			drawables: {
+				cam: imageDrawable1
+			},
+			onImageRecognized: this.playSound(),
+			onError: function(errorMessage){
+				alert(errorMessage);
+			}
 		});
 
 		var pageTwo = AR.ImageTrackable(this.trackerTwo,'*',{
-			onImageRecognized: this.playSound();
+			drawables: {
+				cam: imageDrawable2
+			},
+			onImageRecognized: this.playSound(),
+			onError: function(errorMessage){
+				alert(errorMessage);
+			}
 		});
 	},
 	playSound: function playSoundFn(){
