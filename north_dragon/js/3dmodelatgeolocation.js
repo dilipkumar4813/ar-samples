@@ -33,8 +33,8 @@ var World = {
     			z: 90.0
   			},
 			translate: {
-    			x: 25,
-    			y: 25,
+    			x: 5,
+    			y: 5,
   				z: 0
   			},
   			onClick : function() {
