@@ -11,7 +11,7 @@ var World = {
 		/*
 			First a location where the model should be displayed will be defined. This location will be relativ to the user.	
 		*/
-		var location = new AR.RelativeLocation(null, 5, 0, -2);
+		var location = new AR.RelativeLocation(null, 5, 0, -5);
 
 		/*
 			Next the model object is loaded.
