@@ -4,28 +4,16 @@ var World = {
 	},
 	imageOverlay: function imageOverlayFn(){
 
-		this.targetCollectionOne = AR.TargetCollectionResource("assets/magazineOne.wtc");
-		this.targetCollectionTwo = AR.TargetCollectionResource("assets/magazineTwo.wtc");
+		this.targetCollectionOne = AR.TargetCollectionResource("assets/magazine.wtc",{});
 
 		this.trackerOne = AR.ImageTarget(this.targetCollectionOne, {
 			onTargetsLoaded: this.worldLoaded
 		});
 
-		this.trackerTwo = AR.ImageTarget(this.targetCollectionTwo, {
-			onTargetsLoaded: worldLoaded
-		});
-
 		var imageOne = AR.ImageResource("assets/imageOne.jpg");
-		var imageTwo = AR.ImageResource("assets/imageTwo.jpg");
 
 		var imageDrawable1 = AR.ImageDrawable(imageOne, 1, {
 			transalte:{
-				x:-0.15
-			}
-		});
-
-		var imageDrawable2 = AR.ImageDrawable(imageTwo, 1, {
-			translate:{
 				x:-0.15
 			}
 		});
@@ -39,20 +27,12 @@ var World = {
 				alert(errorMessage);
 			}
 		});
-
-		var pageTwo = AR.ImageTrackable(this.trackerTwo,'*',{
-			drawables: {
-				cam: imageDrawable2
-			},
-			onImageRecognized: this.playSound(),
-			onError: function(errorMessage){
-				alert(errorMessage);
-			}
-		});
 	},
 	playSound: function playSoundFn(){
 		var sound = new AR.Sound("assets/jellylude.mp3", {
-  			onLoaded : function(){sound.play();},
+  			onLoaded : function(){ 
+  				sound.play(); 
+  			},
   			onError : function(){
     			alert("could not play sound");
     		},
