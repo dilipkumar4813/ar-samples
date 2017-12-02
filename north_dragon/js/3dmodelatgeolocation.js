@@ -30,7 +30,7 @@ var World = {
 			},
 			rotate: {
     			x: 0.0,
-    			y: 50.0,
+    			y: -50.0,
     			z: 0.0
   			},
   			onClick : function() {
