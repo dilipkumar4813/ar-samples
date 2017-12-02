@@ -13,7 +13,7 @@ var World = {
 		*/
 
 		//a relative location being 5 meters south, 0 meters west and -5 meters lower than current position of the user
-		var location = new AR.RelativeLocation(null, 4, 0, -4);
+		var location = new AR.RelativeLocation(null, 4, 0, -5);
 		
 		var geoLoc = new AR.GeoLocation(47.77317, 13.069929, 320.);
 
@@ -29,13 +29,8 @@ var World = {
 			},
 			rotate: {
     			x: 0.0,
-    			y: 0.0,
-    			z: 30.0
-  			},
-			translate: {
-    			x: 5,
-    			y: 0,
-  				z: 0
+    			y: 30.0,
+    			z: 0.0
   			},
   			onClick : function() {
     			//something happens
