@@ -35,12 +35,7 @@ var World = {
 
 		});
 
-		var sound = new AR.Sound("assets/jellylude.mp3", {
-  			onLoaded : function(){},
-  			onError : function(){
-    			// alert the user that the sound file could not be loaded
-    		},
-  		});
+		
 
 		/*
 			The last line combines everything by creating an AR.ImageTrackable with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
@@ -50,7 +45,7 @@ var World = {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: sound.play(),
+			onImageRecognized: this.removeLoadingBar(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
@@ -63,6 +58,13 @@ var World = {
 			e.parentElement.removeChild(e);
 			World.loaded = true;
 		}
+
+		var sound = new AR.Sound("assets/jellylude.mp3", {
+  			onLoaded : function(){},
+  			onError : function(){
+    			// alert the user that the sound file could not be loaded
+    		},
+  		});
 	},
 
 	worldLoaded: function worldLoadedFn() {
