@@ -30,12 +30,15 @@ var World = {
 			rotate: {
     			x: 180.0,
     			y: 0.0,
-    			z: 0.0
+    			z: 90.0
   			},
 			translate: {
-    			x: 5,
-    			y: 0,
+    			x: 25,
+    			y: 25,
   				z: 0
+  			},
+  			onClick : function() {
+    			//something happens
   			}
 		});
 
