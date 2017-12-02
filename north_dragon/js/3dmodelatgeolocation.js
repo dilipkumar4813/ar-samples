@@ -11,7 +11,11 @@ var World = {
 		/*
 			First a location where the model should be displayed will be defined. This location will be relativ to the user.	
 		*/
-		var location = new AR.RelativeLocation(null, 5, 0, -5);
+
+		//a relative location being 5 meters south, 0 meters west and -5 meters lower than current position of the user
+		var location = new AR.RelativeLocation(null, 4, 0, -4);
+		
+		var geoLoc = new AR.GeoLocation(47.77317, 13.069929, 320.);
 
 		/*
 			Next the model object is loaded.
