@@ -28,9 +28,9 @@ var World = {
 				z: 1
 			},
 			rotate: {
-    			x: 180.0,
+    			x: 0.0,
     			y: 0.0,
-    			z: 0.0
+    			z: 30.0
   			},
 			translate: {
     			x: 5,
