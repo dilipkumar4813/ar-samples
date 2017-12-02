@@ -47,7 +47,7 @@ var World = {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: this.removeLoadingBar,
+			onImageRecognized: sound.play(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
