@@ -26,7 +26,17 @@ var World = {
 				x: 1,
 				y: 1,
 				z: 1
-			}
+			},
+			rotate: {
+    			x: 180.0,
+    			y: 0.0,
+    			z: 0.0
+  			},
+			translate: {
+    			x: 5,
+    			y: 0,
+  				z: 0
+  			}
 		});
 
         var indicatorImage = new AR.ImageResource("assets/indi.png");
