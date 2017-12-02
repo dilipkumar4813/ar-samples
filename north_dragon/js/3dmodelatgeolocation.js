@@ -16,7 +16,7 @@ var World = {
 		/*
 			Next the model object is loaded.
 		*/
-		var modelDragon = new AR.Model("assets/dino_1.wt3", {
+		var modelDragon = new AR.Model("assets/dino_2.wt3", {
 			onLoaded: this.worldLoaded,
 			scale: {
 				x: 1,
