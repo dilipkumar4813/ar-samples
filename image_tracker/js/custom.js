@@ -22,16 +22,16 @@ var World = {
 
 		});
 
-		var sound = new AR.Sound("assets/jellylude.mp3", {
+		/*var sound = new AR.Sound("assets/jellylude.mp3", {
   		
-  		});
+  		});*/
 
 
 		var pageOne = new AR.ImageTrackable(this.tracker, "*", {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: sound.play(),
+			onImageRecognized: this.removeLoadingBar(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
