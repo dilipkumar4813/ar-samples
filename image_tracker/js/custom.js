@@ -35,10 +35,10 @@ var World = {
 
 		});
 
-		/*var sound = new AR.Sound("assets/jellylude.mp3", {
+		var sound = new AR.Sound("assets/jellylude.mp3", {
   		
-  		});*/
-  		
+  		});
+
 		/*
 			The last line combines everything by creating an AR.ImageTrackable with the previously created tracker, the name of the image target and the drawable that should augment the recognized image.
 			Please note that in this case the target name is a wildcard. Wildcards can be used to respond to any target defined in the target collection. If you want to respond to a certain target only for a particular AR.ImageTrackable simply provide the target name as specified in the target collection.
@@ -67,7 +67,7 @@ var World = {
 		var cssDivRight = " style='display: table-cell;vertical-align: middle; text-align: left;'";
 		document.getElementById('loadingMessage').innerHTML =
 			"<div" + cssDivLeft + ">Scan Target &#35;1 (surfer):</div>" +
-			"<div" + cssDivRight + "><img src='assets/surfer.png'></img></div>";
+			"<div" + cssDivRight + "><img src='assets/surferOne.png'></img></div>";
 	}
 };
 
