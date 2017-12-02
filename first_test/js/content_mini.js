@@ -1,0 +1,6 @@
+var project = {"id":60586,"targetCollections":{"V2":{"targetCollectionUrl":"wtc/targetcollections_4.0.x.wtc"},"V3":{"targetCollectionUrl":"wtc/targetcollections_4.1.x.wtc"},"V1":{"targetCollectionUrl":"wtc/targetcollections_3.x.wtc"},"targetCollectionThumbnailUrl":"http://s3-eu-west-1.amazonaws.com/studio-live/1458794/datasets/8a7cc3b2-73fd-472b-8b42-9c08c5c91a96/dataset_gallery.png"},"targetCollectionUrl":"wtc/targetcollections.wtc","lastLocallyStored":"2017-12-01T15:03:54.043Z","targets":[{"id":"0.8947579976923608","augmentations":[{"id":"bp_aug_1957421","scale":2,"height":"","rotation":0,"zoom":1,"name":"bp_aug_1957421","width":15,"rotationTilt":0,"src":"augmentation/models/car.wt3","type":"Model","rotationHeading":0,"zOrder":1500,"y":31.61366152020358,"x":56.25973520249221}],"active":true,"scaleFactor":0.626953125,"label":"car-silver","zoomFactor":100,"size":{"height":546,"width":1024}}]};
+
+if ( __SDK.checkVersion({minSDKVersion: {ios: "3.2", android: "3.2"}/*, requiredFeatures: ["3d"]*/}) ) {
+    var converter = new blueprint.Converter(null, {report : false});
+    converter.convertProject(project);
+}
