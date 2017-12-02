@@ -29,12 +29,12 @@ var World = {
 			},
 			rotate: {
     			x: 180.0,
-    			y: 0.0,
-    			z: 90.0
+    			y: 90.0,
+    			z: 0.0
   			},
 			translate: {
     			x: 5,
-    			y: 5,
+    			y: 0,
   				z: 0
   			},
   			onClick : function() {
