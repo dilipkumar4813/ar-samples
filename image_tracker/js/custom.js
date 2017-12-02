@@ -2,7 +2,7 @@ var World = {
 	init: function initFn(){
 		this.imageOverlayFn();
 	},
-	imageOverlay: function imageOverlayFn(){
+	createOverlays: function createOverlaysFn() {
 
 		this.targetCollectionResource = new AR.TargetCollectionResource("assets/magazine.wtc", {
         });
@@ -22,11 +22,16 @@ var World = {
 
 		});
 
+		var sound = new AR.Sound("assets/jellylude.mp3", {
+  		
+  		});
+
+
 		var pageOne = new AR.ImageTrackable(this.tracker, "*", {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: this.removeLoadingBar,
+			onImageRecognized: sound.play(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
@@ -46,16 +51,6 @@ var World = {
 		document.getElementById('loadingMessage').innerHTML =
 			"<div" + cssDivLeft + ">Scan Target &#35;1 (surfer):</div>" +
 			"<div" + cssDivRight + "><img src='assets/surferOne.png'></img></div>";
-	},
-	playSound: function playSoundFn(){
-		var sound = new AR.Sound("assets/jellylude.mp3", {
-  			onLoaded : function(){ 
-  				sound.play(); 
-  			},
-  			onError : function(){
-    			alert("could not play sound");
-    		},
-		});
 	}
 };
 
