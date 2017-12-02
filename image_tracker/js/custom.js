@@ -4,25 +4,29 @@ var World = {
 	},
 	imageOverlay: function imageOverlayFn(){
 
-		this.targetCollectionOne = AR.TargetCollectionResource("assets/magazine.wtc",{});
+		this.targetCollectionResource = new AR.TargetCollectionResource("assets/magazine.wtc", {
+        });
 
-		this.trackerOne = AR.ImageTarget(this.targetCollectionOne, {
-			onTargetsLoaded: this.worldLoaded
-		});
+        this.tracker = new AR.ImageTracker(this.targetCollectionResource, {
+            onTargetsLoaded: this.worldLoaded,
+            onError: function(errorMessage) {
+            	alert(errorMessage);
+            }
+        });
 
-		var imageOne = AR.ImageResource("assets/imageOne.jpg");
+		var imageOne = new AR.ImageResource("assets/imageOne.jpg");
 
-		var imageDrawable1 = AR.ImageDrawable(imageOne, 1, {
+		var imageDrawable1 = new AR.ImageDrawable(imageOne, 1, {
 			transalte:{
 				x:-0.15
 			}
 		});
 
-		var pageOne = AR.ImageTrackable(this.trackerOne,'*',{
+		var pageOne = new AR.ImageTrackable(this.tracker,'*',{
 			drawables: {
 				cam: imageDrawable1
 			},
-			// onImageRecognized: this.playSound(),
+			onImageRecognized: this.playSound(),
 			onError: function(errorMessage){
 				alert(errorMessage);
 			}
