@@ -59,12 +59,12 @@ var World = {
 			World.loaded = true;
 		}
 
-		var sound = new AR.Sound("assets/jellylude.mp3", {
+		/*var sound = new AR.Sound("assets/jellylude.mp3", {
   			onLoaded : function(){ sound.play(); },
   			onError : function(){
     			// alert the user that the sound file could not be loaded
     		},
-  		});
+  		});*/
 	},
 
 	worldLoaded: function worldLoadedFn() {
