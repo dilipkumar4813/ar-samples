@@ -28,7 +28,7 @@ var World = {
     			z: 0.0
   			},
   			onClick: function() {
-  				if(!playing){
+  				//if(!playing){
   					var sound = new AR.Sound("assets/jellylude.mp3", {
   						onLoaded : function(){ },
   						onError : function(){
@@ -43,8 +43,7 @@ var World = {
   					
   					sound.play();
   					playing = true;	
-  				}
-    			
+  				//}
   			}
 		});
 
