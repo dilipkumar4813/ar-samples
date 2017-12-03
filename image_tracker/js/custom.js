@@ -45,13 +45,7 @@ var World = {
 			drawables: {
 				cam: overlayOne
 			},
-			onImageRecognized: var sound = new AR.Sound("assets/jellylude.mp3", {
-  				onLoaded : function(){ sound.play(); },
-  				onError : function(){
-    			// alert the user that the sound file could not be loaded
-    			},
-  			}),
-			//this.removeLoadingBar(),
+			onImageRecognized: this.removeLoadingBar(),
             onError: function(errorMessage) {
             	alert(errorMessage);
             }
