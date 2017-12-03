@@ -10,6 +10,7 @@ var World = {
 	createModelAtLocation: function createModelAtLocationFn() {
 
 		// var geoLoc = new AR.GeoLocation(3.1079021,101.6328436);
+		// var location = new AR.RelativeLocation(geoLoc, 4, 0, -4.5);
 		var location = new AR.RelativeLocation(null, 4, 0, -4.5);
 
 		/*
@@ -29,7 +30,7 @@ var World = {
   			},
   			onClick: function() {
   				if(!World.playing){
-  					var sound = new AR.Sound("assets/jellylude.mp3", {
+  					var sound = new AR.Sound("assets/bird_short.mp3", {
   						onLoaded : function(){ },
   						onError : function(){
     						alert("Could not play music")
