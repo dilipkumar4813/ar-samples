@@ -30,10 +30,10 @@ var World = {
     			var sound = new AR.Sound("assets/jellylude.mp3", {
   					onLoaded : function(){ sound.play(); },
   					onError : function(){
-    					// alert the user that the sound file could not be loaded
+    					alert("Could not play music")
     				},
   				});
-  				AR.platform.sendJSONObject({foo:"bar"});
+  				sound.onFinishedPlaying = function(){AR.platform.sendJSONObject({foo:"bar"});};
   			}
 		});
 
