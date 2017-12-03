@@ -28,12 +28,13 @@ var World = {
   			},
   			onClick: function() {
     			var sound = new AR.Sound("assets/jellylude.mp3", {
-  					onLoaded : function(){ sound.play(); },
+  					onLoaded : function(){ },
   					onError : function(){
     					alert("Could not play music")
     				},
   				});
   				sound.onFinishedPlaying = function(){AR.platform.sendJSONObject({foo:"bar"});};
+  				sound.play();
   			}
 		});
 
