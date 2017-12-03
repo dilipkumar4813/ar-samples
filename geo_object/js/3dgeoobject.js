@@ -1,6 +1,7 @@
 var World = {
 	loaded: false,
 	rotating: false,
+	playing: false,
 
 	init: function initFn() {
 		this.createModelAtLocation();
@@ -27,14 +28,23 @@ var World = {
     			z: 0.0
   			},
   			onClick: function() {
-    			var sound = new AR.Sound("assets/jellylude.mp3", {
-  					onLoaded : function(){ },
-  					onError : function(){
-    					alert("Could not play music")
-    				},
-  				});
-  				sound.onFinishedPlaying = function(){AR.platform.sendJSONObject({foo:"bar"});};
-  				sound.play();
+  				if(!playing){
+  					var sound = new AR.Sound("assets/jellylude.mp3", {
+  						onLoaded : function(){ },
+  						onError : function(){
+    						alert("Could not play music")
+    					},
+  					});
+  					
+  					sound.onFinishedPlaying = function(){
+  						AR.platform.sendJSONObject({foo:"bar"});
+  						playing = false;
+  					};
+  					
+  					sound.play();
+  					playing = true;	
+  				}
+    			
   			}
 		});
 
